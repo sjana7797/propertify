@@ -20,8 +20,6 @@
     "@trpc/client": "next",
     "@trpc/react-query": "next",
     "@trpc/server": "next",
-    "drizzle-orm": "^0.29.4",
-    "postgres": "^3.4.3",
     "server-only": "^0.0.1",
     "superjson": "^2.2.1"
   },
