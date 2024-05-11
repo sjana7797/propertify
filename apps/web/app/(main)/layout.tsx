@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode;
 };
 
-function Layout({ children }: Props): JSX.Element {
+function Layout({ children }: Props) {
   return (
     <TRPCReactProvider>
       <div className="flex min-h-screen w-full flex-col">

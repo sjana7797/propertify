@@ -2,15 +2,18 @@ import "dotenv/config";
 // Example model schema from the Drizzle docs
 // https://orm.drizzle.team/docs/sql-schema-declaration
 
-import { text, pgTable, serial, timestamp, varchar } from "drizzle-orm/pg-core";
+import { text, pgTable, timestamp, varchar, serial } from "drizzle-orm/pg-core";
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import { z } from "@repo/common/zod";
 
 export const users = pgTable("user", {
-  id: serial("id").primaryKey(),
+  id: serial("id").primaryKey().notNull(),
   username: varchar("username", { length: 256 }).unique().notNull(),
+  name: text("name"),
   email: varchar("email", { length: 256 }).unique().notNull(),
   password: text("password").notNull(),
+  emailVerified: timestamp("email_verified", { mode: "date" }),
+  image: text("image"),
   createdAt: timestamp("created_at", { withTimezone: true })
     .notNull()
     .defaultNow(),
