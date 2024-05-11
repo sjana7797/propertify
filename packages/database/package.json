@@ -21,12 +21,13 @@
     "@t3-oss/env-nextjs": "^0.10.1",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.30.10",
-    "postgres": "^3.4.4"
+    "drizzle-zod": "^0.5.1",
+    "postgres": "^3.4.4",
+    "@repo/common": "workspace:*"
   },
   "devDependencies": {
-    "@repo/common": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "drizzle-kit": "^0.21.0",
+    "drizzle-kit": "^0.21.1",
     "tsup": "^8.0.2"
   }
 }
