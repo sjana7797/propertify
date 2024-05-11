@@ -4,6 +4,8 @@ import { routes } from "./routes";
 
 const app: Express = express();
 
-app.use(routes);
+app.use(express.json());
+
+app.use("/api", routes);
 
 export { app };

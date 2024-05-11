@@ -3,7 +3,7 @@
   "compilerOptions": {
     "allowJs": true,
     "esModuleInterop": true,
-    "moduleResolution": "node"
+    "moduleResolution": "NodeNext"
   },
   "include": ["src", "env.js", "index.d.ts"]
 }

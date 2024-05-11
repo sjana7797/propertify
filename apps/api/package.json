@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tsc --noEmit && eslint \"src/**/*.ts*\"",
-    "dev": "tsup src/server.ts --watch --onSuccess \"node dist/server.js\"",
+    "dev": "npx tsx watch  src/server.ts",
     "build": "tsup"
   },
   "keywords": [],
@@ -14,7 +14,13 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "@repo/database": "workspace:*",
+    "@repo/common": "workspace:*",
+    "zod": "^3.23.8",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.10",
+    "postgres": "^3.4.4"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
